@@ -61,7 +61,11 @@
 console.log(winningSymbolNr)
 			display.hidden = true;
     			display.innerHTML = array_concursantes[winningSymbolNr];
-array_concursantes.pop(array_concursantes[winningSymbolNr]);
+console.log(winningSymbolNr)
+			const index = array_concursantes.indexOf(array_concursantes[winningSymbolNr]);
+			if (index > -1) {
+  				array_concursantes.splice(index, 1);
+			}
 		}
 
 		chart();
