@@ -1,0 +1,115 @@
+html, body {
+	height: 100%;
+	margin: 0;
+}
+
+body{
+	background:  radial-gradient(#9E0B0E , black );
+}
+
+.header img{
+	width: 400px;
+	height: 200px;
+	display:block;
+	padding: 4px;
+    	margin:auto;
+}
+
+.container{
+	min-height: 100%;
+	margin-bottom: -50px;
+}
+
+.row{
+	display: flex;
+	width: 100%;
+	height: 100%;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: center;
+}
+
+.wheel{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+}
+
+#idcanvas{
+	position: relative;
+	width: 100%;
+	left: 35px;
+}
+
+.marker {
+	position: relative;
+	top: 10px;
+	left: -25px;
+	transform: rotate(90deg);
+	z-index: 2;
+}
+
+#myBtn{
+	font-size: 15px;
+	padding: 0px 24px;
+	margin: 20px;
+	height: 56px;
+	border-radius: 4px;
+	cursor: pointer;
+	background: #13a23b;
+	border: none;
+	color: white;
+
+	&hover{
+		background: #13a23b;
+	}
+
+
+	@media (max-width: 768px){
+		height: 45px;
+		padding: 0px 12px;
+		margin: 10px;
+		font-size: 12px;
+	}
+}
+
+#display{
+	font-size: 30px;
+        font-weight: bold;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: white;
+	text-align:center; 
+}
+
+
+.push {
+	height: 50px;
+}
+
+footer{
+padding: 1rem;
+height: 50px;
+background-color: #101114;
+color: white;
+text-align:center; 
+}
+
+footer a {color: white; text-decoration:none;}
+
+.blur {
+  animation: blur 10s;
+}
+
+@keyframes blur {
+  0% {
+    filter: blur(1.5px);
+  }
+  80% {
+    filter: blur(1.5px);
+  }
+  100% {
+    filter: blur(0px);
+  }
+}

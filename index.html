@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es-CL">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv=X-AU-Compatible content="IE=edge">
+		<meta name="viewport" content="width=device-width.initial-scale=1.0">
+		<title>Home</title>
+		<link rel="icon" type="image/png" href="icon.png" sizes="64x64">
+		<link href="style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="container">
+			<header class="header">
+
+				<img class="casino" src="casino.png" />	
+
+        		</header>
+			<div class="row">
+					<div class="wheel">
+						<div class="chart">
+							<canvas id="idcanvas" width="600" height="600"></canvas>
+						</div>
+						<div>
+							<img class="marker" src="marker.png" />	
+						</div>
+					</div>
+					
+					<div class="controls">
+						<button id="myBtn"><span id="idestado">Spin the wheel</span></button>
+					</div>
+
+					<div class="result">
+						<span id="display">-</span>
+					</div>
+			</div>
+			<div class="push"></div>
+		</div>
+		<script src="script.js"></script>
+
+		<footer>
+			<p>© 2020 Copyright:
+				<a href="https://github.com/TheBlckCat">The Black Cat</a>
+			</p>
+		</footer>		
+	</body>
+</html>
