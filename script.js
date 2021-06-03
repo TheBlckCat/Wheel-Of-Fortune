@@ -81,7 +81,7 @@ myBtn.addEventListener('click', () => {
 	ps  = 360/array_concursantes.length;
         rng      = Math.floor((Math.random() * 1440) + 360);
                 
-	rotation = (Math.round(rng / ps) * ps);
+	rotation = ((Math.round(rng / ps) * ps)*10);
             
 	picked = Math.round(array_concursantes.length - (rotation % 360)/ps);
 	picked = picked >= array_concursantes.length ? (picked % array_concursantes.length) : picked;
@@ -106,14 +106,12 @@ canvas.addEventListener('transitionend', () => {
 	display.hidden = false;
 
 	if (array_concursantes.length < 1){
-		location.reload();
+		swal({ title: "Reiniciar la ruleta", icon: "success", button: "Okey",})
+			.then((value) => {
+ 				location.reload();
+			});		
 	}else{
-					
-		if (array_concursantes.length === 1){
-			document.getElementById("idestado").innerHTML="Reset";
-		}else{
-			document.getElementById("idestado").innerHTML="Sortear";
-		}
+		document.getElementById("idestado").innerHTML="Spin the wheel";
 	}
   });
 	

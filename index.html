@@ -2,11 +2,11 @@
 <html lang="es-CL">
 	<head>
 		<meta charset="utf-8">
-		<meta http-equiv=X-AU-Compatible content="IE=edge">
-		<meta name="viewport" content="width=device-width.initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Home</title>
 		<link rel="icon" type="image/png" href="icon.png" sizes="64x64">
 		<link href="style.css" rel="stylesheet" />
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	</head>
 	<body>
 		<div class="container">
@@ -24,14 +24,16 @@
 							<img class="marker" src="marker.png" />	
 						</div>
 					</div>
+
+					<div class="result">
+						<span id="display">-</span>
+					</div>
 					
 					<div class="controls">
 						<button id="myBtn"><span id="idestado">Spin the wheel</span></button>
 					</div>
 
-					<div class="result">
-						<span id="display">-</span>
-					</div>
+					
 			</div>
 			<div class="push"></div>
 		</div>
