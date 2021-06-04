@@ -1,20 +1,12 @@
 		const array_concursantes=
 		[
 
-"Opción 1",
-"Opción 2",
-"Opción 3",
-"Opción 4",
-"Opción 5",
-"Opción 6",
-"Opción 7",
-"Opción 8",
-"Opción 9",
-"Opción 10",
-"Opción 11",
-"Opción 12",
-"Opción 13"
-
+			["#01CE61","Verde"],
+			["#FFCD11","Amarillo"],
+			["#0194FF","Azul"],
+			["#CE01FE","Morado"],
+			["#F22223","Rojo"],
+			["#F28922","Naranjo"],
 		];
 
 		let canvas=document.getElementById("idcanvas");
@@ -41,27 +33,17 @@
 			context.moveTo(center,center);
 			context.arc(center,center,center-20,i*2*Math.PI/array_concursantes.length, (i+1)*2*Math.PI/array_concursantes.length);
 			context.lineTo(center,center);
-			context.fillStyle =random_color();
+			context.fillStyle = array_concursantes[i][0];
 			context.fill();
 
 			context.save();
-			context.translate(center, center);
-			context.rotate(3*2*Math.PI/(5*array_concursantes.length)+i*2*Math.PI/array_concursantes.length);
-			context.translate(-center, -center);
-			context.font = "13px Comic Sans MS";
-			context.textAlign = "right";
-			context.fillStyle = "white";
-			context.fillText(array_concursantes[i], canvas.width-30, center);
-			context.restore();
+			
 			}
 		}
 
 		function handleWin(winningSymbolNr){
-    			
-console.log(winningSymbolNr)
 			display.hidden = true;
-    			display.innerHTML = array_concursantes[winningSymbolNr];
-console.log(winningSymbolNr)
+    			display.innerHTML = array_concursantes[winningSymbolNr][1];
 			const index = array_concursantes.indexOf(array_concursantes[winningSymbolNr]);
 			if (index > -1) {
   				array_concursantes.splice(index, 1);
